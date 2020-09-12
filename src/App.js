@@ -19,16 +19,16 @@ function App() {
         </header>
         <div className="container">
             <Switch>
-              <Route exact path="/">
+              <Route exact path="/react_js_component_basic">
                 <HelloReact />
               </Route>
-              <Route path="/es6">
+              <Route path="/react_js_component_basic/es6">
                 <ES6 />
               </Route>
-              <Route path="/oop">
+              <Route path="/react_js_component_basic/oop">
                 <OOP />
               </Route>
-              <Route path="/async">
+              <Route path="/react_js_component_basic/async">
                 <AsyncEtc/>
               </Route>
 

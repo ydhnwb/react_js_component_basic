@@ -14,16 +14,16 @@ export default class Navbar extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
+                            <a className="nav-link" href="/react_js_component_basic">Home <span className="sr-only">(current)</span></a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/es6">ES6</a>
+                            <a className="nav-link" href="/react_js_component_basic/es6">ES6</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/oop">OOP</a>
+                            <a className="nav-link" href="/react_js_component_basic/oop">OOP</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/async">async etc</a>
+                            <a className="nav-link" href="/react_js_component_basic/async">async etc</a>
                         </li>
                     </ul>
                     <form className="form-inline my-2 my-lg-0">
