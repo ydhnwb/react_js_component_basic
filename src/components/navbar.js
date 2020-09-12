@@ -1,5 +1,5 @@
 import React from 'react';
-import { Router } from 'react-router';
+import { Link } from 'react-router-dom';
 
 export default class Navbar extends React.Component {
 
@@ -14,16 +14,16 @@ export default class Navbar extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link" href="/react_js_component_basic">Home <span className="sr-only">(current)</span></a>
+                            <Link className="nav-link" to="/home">React Homepage</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/react_js_component_basic/es6">ES6</a>
+                            <Link className="nav-link" to="/es6">ES6</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/react_js_component_basic/oop">OOP</a>
+                            <Link className="nav-link" to="/oop">OOP</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/react_js_component_basic/async">async etc</a>
+                            <Link className="nav-link" to="/async">async etc</Link>
                         </li>
                     </ul>
                     <form className="form-inline my-2 my-lg-0">
