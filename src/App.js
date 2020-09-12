@@ -3,7 +3,7 @@ import Navbar from './components/navbar';
 import './App.css';
 import Article from './components/articles';
 import Greeter from './components/greeter';
-import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Route, HashRouter as Router, Switch } from 'react-router-dom';
 import { ES6 } from './pages/es6';
 import OOP from './pages/oop';
 import { HelloReact } from './pages/hello_react';
