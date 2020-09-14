@@ -8,6 +8,7 @@ import { ES6 } from './pages/es6';
 import OOP from './pages/oop';
 import { HelloReact } from './pages/hello_react';
 import { AsyncEtc } from './pages/async_callback';
+import { Dashboard } from './pages/dashboard';
 
 function App() {
 
@@ -17,12 +18,15 @@ function App() {
         <header>
           <Navbar />
         </header>
-        <div className="container">
+        <div className="">
           <Switch>
             <Route exact path="/">
               <Redirect to="/home" />
             </Route>
             <Route def exact path="/home">
+              <Dashboard />
+            </Route>
+            <Route def exact path="/helloreact">
               <HelloReact />
             </Route>
             <Route path="/es6">

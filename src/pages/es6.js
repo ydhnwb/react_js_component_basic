@@ -4,66 +4,71 @@ import ReactEmbedGist from 'react-embed-gist';
 
 
 export const ES6 = () => {
-    
-    function add(a, b) { return a+b;}
-    function minus(a, b){ return a-b; }
-    function multiply(a, b){ return a*b;}
-    function divide(a, b){
-        if(b == 0){
+    let styles = {
+        marginTop: 76,
+        marginLeft: 38,
+        marginRight: 38,
+        marginBottom: 38
+    };
+    function add(a, b) { return a + b; }
+    function minus(a, b) { return a - b; }
+    function multiply(a, b) { return a * b; }
+    function divide(a, b) {
+        if (b == 0) {
             return "Erorr divide by zero";
         }
-        return a/b;
+        return a / b;
     }
-    function square(a, b){ return a**b; }
-    function min(a, b){ return a < b ? a : b; }
-    function max(a, b){return a > b ? a : b; }
+    function square(a, b) { return a ** b; }
+    function min(a, b) { return a < b ? a : b; }
+    function max(a, b) { return a > b ? a : b; }
 
-    function showPrompt(e){
+    function showPrompt(e) {
         e.preventDefault();
         let isValid = false;
         let firstNum;
         let secondNum;
         let operator;
-        do{
+        do {
             firstNum = prompt("Masukkan angka pertama", "");
-            if(isNaN(firstNum)){
+            if (isNaN(firstNum)) {
                 alert("Nilai tidak valid. Mohon masukkan lagi")
-            }else{
+            } else {
                 isValid = true;
             }
-        }while(!isValid);
+        } while (!isValid);
         isValid = false;
-        do{
+        do {
             secondNum = prompt("Masukkan angka kedua", "");
-            if(isNaN(secondNum)){
+            if (isNaN(secondNum)) {
                 alert("Nilai tidak valid. Mohon masukkan lagi")
-            }else{
+            } else {
                 isValid = true;
             }
-        }while(!isValid);
+        } while (!isValid);
         isValid = false;
-        do{
+        do {
             operator = prompt("Masukkan operator. Masukkan + untuk tambah,"
-            +" - untuk kurang, * untuk kali, / untuk bagi, ^ untuk pangkat, max untuk maksimum, min untuk minimum"," ");
-            if(operator.trim() == '+' || operator.trim() == '-' || operator.trim() == '*' 
-            || operator.trim() == '/' || operator.trim() == 'max' || operator.trim() == 'min' 
-            || operator.trim() == '^'){
+                + " - untuk kurang, * untuk kali, / untuk bagi, ^ untuk pangkat, max untuk maksimum, min untuk minimum", " ");
+            if (operator.trim() == '+' || operator.trim() == '-' || operator.trim() == '*'
+                || operator.trim() == '/' || operator.trim() == 'max' || operator.trim() == 'min'
+                || operator.trim() == '^') {
                 isValid = true;
-            }else{
+            } else {
                 alert("Mohon masukkan operator yang valid.")
             }
-        }while(!isValid);
+        } while (!isValid);
 
         firstNum = +firstNum;
         secondNum = +secondNum;
         let res;
-        switch(operator.trim()){
-            case '+' :
+        switch (operator.trim()) {
+            case '+':
                 res = add(firstNum, secondNum);
                 alert(`Hasilnya adalah ${res}`);
                 break;
             case '-':
-                res =minus(firstNum, secondNum);
+                res = minus(firstNum, secondNum);
                 alert(`Hasilnya adalah ${res}`);
                 break;
             case '*':
@@ -75,7 +80,7 @@ export const ES6 = () => {
                 alert(`Hasilnya adalah ${res}`);
                 break;
             case '^':
-                res =square(firstNum, secondNum);
+                res = square(firstNum, secondNum);
                 alert(`Hasilnya adalah ${res}`);
                 break;
             case 'min':
@@ -92,9 +97,10 @@ export const ES6 = () => {
     }
 
     return (
-        <div>
+        <div style={styles}>
             <h1>Tugas ES6</h1>
-            <button onClick={ e => showPrompt(e)} className="btn btn-primary">Calculator ES6</button>
+            <br></br>
+            <button onClick={e => showPrompt(e)} className="btn btn-primary">Calculator ES6</button>
             <ReactEmbedGist gist="ydhnwb/b4a5a1b8cea0fe49785745ca4e77eabb" />
 
         </div>

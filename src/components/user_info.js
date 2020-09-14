@@ -7,11 +7,12 @@ export default class UserInfo extends React.Component {
 
     render() {
         return (
-            <div>
-                <h5>Learn more about this person</h5>
+            <div className="p-3">
+                <h3>Learn more about this person</h3>
                 <div>
                     <ul>
                         <li>Name: {this.props.name}</li>
+                        <br></br>
                         <li>Age: {this.props.age}</li>
                     </ul>
                 </div>
@@ -21,7 +22,12 @@ export default class UserInfo extends React.Component {
                         {
                             this.props.hobbies.map((hobby, index) => {
                                 return (
-                                    <li>{hobby}</li>
+                                    <div>
+                                    <li className="list">{hobby}</li>
+                                    <br></br>
+                                    </div>
+
+                                    
                                 );
                             })
                         }
